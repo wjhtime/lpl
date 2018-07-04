@@ -23,31 +23,33 @@
 
 ## Quick start
 ```shell
-pip3 install -r requirements.txt
+pip3 install lpl
 ```
 
 
 ## 使用方法
 ### 查看比赛
-```python3 lpl.py -l```或 ```python3 lpl.py --list```
+```lpl -l``` 或  ```lpl --list``` 查看比赛的列表
 
 ### 查看比赛相关新闻
-```python3 lpl.py -n```或```python3 lpl.py --news```
+```lpl -n``` 或 ```lpl --news``` 查看比赛新闻，默认为RNG，查看其他队伍的新闻需加上``` -t ```参数选择队伍
+
+### 查看队伍积分
+
+```lpl -s``` 或 ```lpl --score```查看比赛近况
+
+### 选择队伍
+```lpl -t``` 或 ```lpl --team``` 选择队伍，例如：```lpl -t 1```为选择队伍1
 
 ### 查看帮助
-```python3 lpl.py --help```
+```python3 lpl.py --help``` 可查看队伍列表
 
 
 
 
 ## Screen shot
-### 比赛列表
 
-![](./images/screenshot.jpg)
-
-### 比赛相关新闻
-
-![](./images/screenshot2.jpg)
+![](./images/screenshot3.jpg)
 
 
 
