@@ -1,4 +1,4 @@
-from lpl import gameList, teamScore, gameNews
+import gameList, teamScore, gameNews, webSearch
 import click
 
 app_desc = """
@@ -31,14 +31,17 @@ app_desc = """
 @click.option('-n', '--new', is_flag=True, help="lpl最新新闻")
 @click.option('-s', '--score', is_flag=True, help="队伍积分")
 @click.option('-t', '--team', default=8, help="选择队伍 1-EDG, 2-IG, 8-RNG, 9-SS, 12-WE 57-BLG 默认为8")
-def cli(list, new, score, team):
-    # print(list, new)
+@click.option('--search', type=str, help="搜索关键词")
+def cli(list, new, score, team, search):
+    # print(search)
     if list:
         gameList.game()
     elif new:
         gameNews.news(team)
     elif score:
         teamScore.score()
+    elif search:
+        webSearch.search(search)
 
 def main():
     print(app_desc)
