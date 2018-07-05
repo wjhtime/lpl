@@ -4,9 +4,10 @@ import prettytable as pt
 import time
 from termcolor import colored, cprint
 
+newsUrl = "http://lpl.qq.com/web201612/data/LOL_NEWMATCH_FIR_PAGE_TEAM_NEWS_INFO.js"
+
 # 新闻
 def news(teamId):
-    newsUrl = "http://lpl.qq.com/web201612/data/LOL_NEWMATCH_FIR_PAGE_TEAM_NEWS_INFO.js"
     tb = pt.PrettyTable()
     tb.field_names = [colored('标题','red'), colored('摘要', 'red'), colored('时间', 'red')]
     # tb.sortby = '时间'

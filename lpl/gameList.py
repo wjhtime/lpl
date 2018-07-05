@@ -4,9 +4,11 @@ import prettytable as pt
 import time
 from termcolor import colored, cprint
 
+
+gameUrl = "http://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST.js"
+
 # 比赛列表
 def game():
-    gameUrl = "http://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST.js"
     tb = pt.PrettyTable()
     tb.field_names = [colored('时间','red'), colored('比赛', 'red'), colored('比赛类型','red'), colored('赛区','red'), colored('获胜方', 'red'), colored('队伍A积分', 'red'), colored('队伍B积分', 'red')]
     # tb.sortby = colored('时间','blue')

@@ -15,6 +15,8 @@ def search(keyword):
     tb.field_names = ['id', '标题']
     response = requests.get(searchUrl. format(keyword), headers=headers)
     for k, sel in enumerate(etree.HTML(response.text).xpath("//div[@class='result c-container ']")):
+        # print(etree.tostring(sel.xpath("h3/a")[0]))
+        # exit()
         tb.add_row([k, sel.xpath("h3/a/text()")[0]])
         tb.add_row(['', sel.xpath("h3/a/@href")[0]])
         tb.add_row(['', ''])
