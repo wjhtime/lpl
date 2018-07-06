@@ -39,7 +39,13 @@ python3 setup.py install
 ```lpl -s``` 或 ```lpl --score```查看比赛近况
 
 ### 选择队伍
-```lpl -t``` 或 ```lpl --team``` 选择队伍，例如：```lpl -t 1```为选择队伍1
+```lpl -t``` 或 ```lpl --team``` 选择队伍，需结合 ```-n``` 参数使用，例如：```lpl -n -t 1 ``` 为选择队伍1的新闻
+
+### 队员列表
+```lpl -m``` 或 ```lpl --member``` 查看队员列表
+
+### 搜索功能
+```lpl --search uzi``` 即可搜索出关键词为uzi的内容
 
 ### 查看帮助
 ```python3 lpl.py --help``` 可查看队伍列表
